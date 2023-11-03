@@ -249,25 +249,20 @@ st.divider()
 
 st.subheader("1. Title")
 with st.echo():
-    st.title("**This** is how we can *add* `Title`") # similar to h1 in html
+    st.title("*This* is how we can add `Title`") # similar to h1 in html
 st.divider()
 
 st.subheader("2. Subheader")
 with st.echo():
-    st.subheader('This is a subheader with a divider', divider='rainbow')
     st.subheader('_Streamlit_ is :blue[cool] :sunglasses:')
-    st.subheader("This is a **Bold Header**, This is an *Italic Header*" ) #  similar to h2 in html
-st.divider()
+    st.subheader('This is a subheader with a divider', divider='rainbow')
 
 st.subheader("3. Markdown")
 with st.echo():
-    st.markdown("This is a Markdown, <mark>highlighted using html</mark>, <del>Cut out</del>", unsafe_allow_html=True) # to display any markdown element
-    st.markdown("*Streamlit* is **really** ***cool***.")
+    st.markdown("<h3>This is a Markdown Highlighted using HTML</h3>", unsafe_allow_html=True) # to display any markdown element
     st.markdown('''
         :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
         :gray[pretty] :rainbow[colors].''')
-    st.markdown("Here's a bouquet &mdash;\
-                :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:")
 
     multi = '''If you end a line with two spaces,
     a soft return is used for the next line.
@@ -292,4 +287,64 @@ with st.echo():
     st.caption('This is a string that explains something above.')
     st.caption('A caption with _italics_ :blue[colors] and emojis :sunglasses:')
 
+st.title("Input Elements")
 
+st.subheader("1. Text Input")
+with st.echo():
+    txt = st.text_input("This is a text input", value="default text") # to get text input from the user
+    st.write(txt)
+    with st.expander("Documentation"):
+        st.write(st.text_input)
+
+st.subheader("2. Number Input")
+with st.echo():
+    num = st.number_input("This is a number input", value=10) # to get number input from the user
+    st.write(num)
+    with st.expander("Documentation"):
+        st.write(st.number_input)
+
+st.subheader("3. Checkbox")
+with st.echo():
+    check = st.checkbox("This is a checkbox") # to get checkbox input from the user
+
+    if check:
+        st.write("Checkbox is checked")
+    else:
+        st.write("Checkbox is unchecked")
+    with st.expander("Documentation"):
+        st.write(st.checkbox)
+
+st.subheader("4. Radio Button")
+with st.echo():
+    radio = st.radio("This is a radio button", options=["Option 1", "Option 2"]) # to get radio button input from the user
+    st.write(radio)
+    with st.expander("Documentation"):
+        st.write(st.radio)
+
+st.subheader("5. Selectbox")
+with st.echo():
+    select = st.selectbox("This is a selectbox", options=["Option 1", "Option 2"]) # to get selectbox input from the user
+    st.write(select)
+    with st.expander("Documentation"):
+        st.write(st.selectbox)
+
+st.subheader("6. Multiselect")
+with st.echo():
+    multi = st.multiselect("This is a multiselect", options=["Option 1", "Option 2","Option 3","Option 4"]) # to get multiselect input from the user
+    st.write(multi)
+    with st.expander("Documentation"):
+        st.write(st.multiselect)
+
+st.subheader("7. Slider")
+with st.echo():
+    slider = st.slider("This is a slider", min_value=0, max_value=10) # to get slider input from the user
+    st.write(slider)
+    with st.expander("Documentation"):
+        st.write(st.slider)
+
+st.subheader("8. Date Input")
+with st.echo():
+    date = st.date_input("This is a date input") # to get date input from the user
+    st.write(date)
+    with st.expander("Documentation"):
+        st.write(st.date_input)
