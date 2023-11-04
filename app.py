@@ -22,7 +22,9 @@ st.write("2. Llama-index")
 st.code("pip install llama-index")
 st.write("3. Streamlit")
 st.code("pip install streamlit")
-st.write("4. OpenAI API key")
+st.write("4. Pypdf")
+st.code("pip install pypdf")
+st.write("5. OpenAI API key")
 st.write("Check out this [Link](https://platform.openai.com/account/api-keys)")
 
 ColoredHeader(
@@ -62,6 +64,11 @@ st.markdown("*Replace YOUR_API_KEY with your API key*")
 st.subheader("3. Choosing Prompt")
 st.code('''prompt = "Write a poem about a cat."''')
 st.markdown("*This is the prompt that will be used to generate the response*")
+st.markdown("Check out")
+st.markdown('''
+* [ChatGPT Best Prompt Practices](https://platform.openai.com/docs/guides/gpt-best-practices/strategy-write-clear-instructions)
+* [Prompt Examples](https://platform.openai.com/examples)
+''')
 
 st.subheader("4. Generating the response")
 st.code(r'''
