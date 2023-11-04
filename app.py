@@ -25,9 +25,12 @@ st.code("pip install streamlit")
 st.write("4. Pypdf")
 st.code("pip install pypdf")
 st.write("5. OpenAI API key")
-st.write("Get started by following the official OpenAI documentation [here](https://platform.openai.com/docs/quickstart?context=python).")
-st.write("We recommend setting up your API Key for all projects to ease the implementation process.")
+st.write("Follow this [link](https://platform.openai.com/docs/quickstart?context=python) to create your own OpenAI API Key.")
+st.write("Or you can get started by following the official OpenAI documentation [here](https://platform.openai.com/docs/quickstart?context=python).")
+st.write("We recommend setting up your API Key for 'all projects' to ease the implementation process.")
 st.write("The optional steps can be skipped as they will not be required.")
+st.markdown("The OpenAI API uses API keys for authentication.")
+st.markdown("Remember that your API key is a secret! Do not share it with others or expose it in any client-side code (browsers, apps). Production requests must be routed through your own backend server where your API key can be securely loaded from an environment variable or key management service.")
 
 ColoredHeader(
     "Lets Start Coding",
