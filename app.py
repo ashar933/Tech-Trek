@@ -244,6 +244,11 @@ ColoredHeader(
     description="Now we will be using Streamlit to make a web app out of this. Let's start with the Basics"
 )
 
+st.title("How to Run Streamlit Code")
+st.code('streamlit run app.py')
+st.markdown("*This is the command to run a streamlit app, replace app.py with the your python file*")
+st.caption("This command should be run instead of python app.py in the terminal")
+
 st.title("Text Elements")
 st.divider()
 
